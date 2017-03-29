@@ -60,7 +60,33 @@
 	
 	<script>
 		$(document).ready(function(){
-			
+			$(".img").animate({
+				left: "+=100%"
+			}, 1000);
+			var picNum = 2;
+			$("body").on("mousewheel", function(event){
+				var e = event.originalEvent;
+				var delta = e.wheelDelta;
+				var img = "/img/img"+picNum+".png";
+				if(delta>0 && picNum>0){
+					var html = "<div class='img' style='background-image: url("+img+")' id='picNum"+picNum+"'></div>";
+					$(".main_image").append(html);
+					$(".img").animate({
+						left: "+=100%"
+					}, 1000, function(){
+						
+					});
+					picNum--;
+				} else if(delta<0 && picNum<2){
+					var html = "<div class='img' style='background-image: url("+img+")' id='picNum"+picNum+"'></div>";
+					$(".main_image").append(html);
+					$(".main_image").append(html);
+					$(".img").animate({
+						left: "-=100%"
+					}, 1000);
+					picNum++;
+				}
+			});
 		});
 		// next, prev mouseover
 		$(".arrow_wrap").mouseover(function(){
