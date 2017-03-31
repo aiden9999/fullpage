@@ -9,47 +9,44 @@
 	
 	<body id="main_body">
 		<div class="main_container">
-			<div class="center_container">
-				<div class="day_wrap">
-					<label id="day"></label>일
-					<label id="hour"></label>시간
-					<label id="minute"></label>분
-					<label id="second"></label>초
-				</div>
-				<div class="main_image">
-					<div class="img"></div>
-				</div>
-			</div>
 			<div class="header">
 				<div class="logo" onclick="location.href='/'"></div>
 			</div>
-			<div class="side_menu left">
-				<div class="menu_wrap">
-					<div class="menu rotate" id="culture">
-						<span onclick="location.href='/culture'">CULTURE</span>
-					</div>
-					<div class="menu rotate" id="travel">
-						<span onclick="location.href='/travel'">TRAVEL</span>
+			<div class="inner">
+				<div class="side_menu">
+					<div class="menu_wrap">
+						<div class="menu" id="about">
+							<span onclick="location.href='/about'">ABOUT US</span>
+						</div>
+						<div class="menu" id="culture">
+							<span onclick="location.href='/culture'">CULTURE</span>
+						</div>
+						<div class="menu" id="travel">
+							<span onclick="location.href='/travel'">TRAVEL</span>
+						</div>
+						<div class="menu" id="play">
+							<span onclick="location.href='/play'">PLAY</span>
+						</div>
+						<div class="menu" id="picture">
+							<span onclick="loc('picture')">PICTURE</span>
+						</div>
+						<div class="menu" id="diary">
+							<span onclick="location.href='/diary'">DIARY</span>
+						</div>
+						<div class="menu" id="diary">
+							<span onclick="location.href='/diary'">VISITORS</span>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="side_menu right">
-				<div class="menu_wrap wrap_right">
-					<div class="menu rotate" id="play">
-						<span onclick="location.href='/play'">PLAY</span>
+				<div class="center_container">
+					<div class="day_wrap">
+						<label id="day"></label>일
+						<label id="hour"></label>시간
+						<label id="minute"></label>분
+						<label id="second"></label>초
 					</div>
-					<div class="menu rotate" id="picture">
-						<span onclick="loc('picture')">PICTURE</span>
-					</div>
-				</div>
-			</div>
-			<div class="footer">
-				<div class="menu_wrap">
-					<div class="menu" id="diary">
-						<span onclick="location.href='/diary'">DIARY</span>
-					</div>
-					<div class="menu" id="about">
-						<span onclick="location.href='/about'">ABOUT US</span>
+					<div class="main_image">
+						<div class="img"></div>
 					</div>
 				</div>
 			</div>
@@ -83,7 +80,7 @@
 		function loc(menu){
 			$(".main_image").css("background-color", "white");
 			$(".img").animate({
-				left: "+=100%",
+				left: "+=100%"
 			}, 1500, function(){
 				location.href="/"+menu;
 			});
