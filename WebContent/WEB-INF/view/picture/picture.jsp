@@ -8,7 +8,7 @@
 	</head>
 	
 	<body>
-		<div class="picture_container">
+		<div class="menu_container picture_container">
 			<div class="header">
 				<div class="logo" onclick="location.href='/'"></div>
 			</div>

@@ -12,6 +12,7 @@
 	
 	<context:component-scan base-package="main"/>
 	<context:component-scan base-package="picture"/>
+	<context:component-scan base-package="diary"/>
 
 	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver"
 		id="beanNameViewResolver" p:order="2" />
