@@ -19,13 +19,52 @@
 				<div class="center_container">
 					<div class="inner">
 						<div class="tab_wrap" id="tabWrap">
-							<c:forEach var="i" begin="1" end="15">
-								<div class="tab">
-									<div class="txt">tab${i }</div>
+							<div class="view">
+								<div class="scroll">
+									<div class="txt_wrap">
+										<c:forEach var="i" begin="1" end="15">
+											<div class="tab">
+												<div class="txt"><span>tab${i }</span></div>
+												</div>
+										</c:forEach>
 									</div>
-							</c:forEach>
+								</div>
+							</div>
 						</div>
-						<div class="content_wrap">asdf</div>
+						<div class="content_wrap">
+							<div class="title_wrap" id="titleWrap">
+								<div class="view">
+									<div class="scroll">
+										<div class="titles">
+											<c:forEach var="i" begin="1" end="15">
+												<div class="title">
+													<div class="txt"><span>title${i }</span></div>
+												</div>
+											</c:forEach>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="contents">
+								<div class="contents_wrap">
+									<div class="day">2017-04-12</div>
+									<div class="view">
+										<div class="scroll">
+											<div class="txt">
+												<c:forEach var="i" begin="1" end="50">
+													a<br>
+												</c:forEach>
+											</div>
+										</div>
+									</div>
+									<div class="btn_wrap">
+										<div class="btn">쓰기</div>
+										<div class="btn">수정</div>
+										<div class="btn">삭제</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -33,17 +72,31 @@
 	</body>
 	
 	<script>
-		// 탭 휠
-		$(document).ready(function(){
-			$("#tabWrap").on("mouseWheel", function(e){
-				console.log(e);
-			});
-		});
-// 		$("#tabWrap").on("mouseWheel", function(e){
-// 			console.log(e);
-// 			var evt = e.originalEvent;
-// 			var delta = evt.wheelDelta;
-// 			console.log(delta);
+		// 폴더 휠
+// 		$("#tabWrap").on("mousewheel", function(e){
+// 			var delta = e.originalEvent.wheelDelta;
+// 			if(delta<0){
+// 				$(".txt_wrap").animate({
+// 					top: "-=65px"
+// 				}, 500);
+// 			} else {
+// 				$(".txt_wrap").animate({
+// 					top: "+=65px"
+// 				}, 500);
+// 			}
+// 		});
+		// 타이틀 휠
+// 		$("#titleWrap").on("mousewheel", function(e){
+// 			var delta = e.originalEvent.wheelDelta;
+// 			if(delta<0){
+// 				$(".titles").animate({
+// 					top: "-=65px"
+// 				}, 500);
+// 			} else {
+// 				$(".titles").animate({
+// 					top: "+=65px"
+// 				}, 500);
+// 			}
 // 		});
 	</script>
 </html>
